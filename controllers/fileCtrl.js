@@ -3,9 +3,9 @@ const Company = require("../models/company");
 const cloudinary = require("cloudinary");
 
 cloudinary.config({
-  cloud_name: "itshubham",
-  api_key: "494949524617482",
-  api_secret: "N-FF5GZLzvv5I-hV55tGhDd3KqQ"
+  cloud_name: process.env.CLOUD_NAME,
+  api_key: process.env.API_KEY,
+  api_secret: process.env.API_SECRET
 });
 
 exports.addImage = async (req, res) => {
